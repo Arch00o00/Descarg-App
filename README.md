@@ -35,3 +35,18 @@ Clona este repositorio:
 ```bash
 git clone https://github.com/tuusuario/YouStream2Audio.git
 cd YouStream2Audio
+```
+
+## 🚀 Despliegue
+
+Para desplegar esta aplicación en un servicio de alojamiento como Heroku o Render, sigue estos pasos:
+
+1.  **Crea una cuenta** en la plataforma de tu elección.
+2.  **Crea una nueva aplicación** y conéctala a este repositorio de GitHub.
+3.  **Configura las variables de entorno**:
+    *   `SPOTIFY_CLIENT_ID`: Tu client ID de Spotify.
+    *   `SPOTIFY_CLIENT_SECRET`: Tu client secret de Spotify.
+4.  **Añade los buildpacks necesarios**:
+    *   `heroku/python`
+    *   `https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git`
+5.  **Despliega la aplicación**. La plataforma instalará las dependencias y ejecutará la aplicación usando el `Procfile`.
