@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouStream2Audio</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        input, select, button {
+            display: block;
+            width: 100%;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>YouStream2Audio</h1>
+        <form action="/download" method="post">
+            <textarea name="urls" placeholder="Enter video URLs, one per line" rows="5" required></textarea>
+            <input type="text" name="title" placeholder="Title (optional)">
+            <input type="text" name="artist" placeholder="Artist (optional)">
+            <input type="text" name="album" placeholder="Album (optional)">
+            <p><small>Custom metadata is only applied to single file downloads.</small></p>
+            <select name="format">
+                <option value="mp3">MP3</option>
+                <option value="wav">WAV</option>
+                <option value="flac">FLAC</option>
+                <option value="alac">ALAC</option>
+            </select>
+            <button type="submit">Download and Convert</button>
+        </form>
+    </div>
+</body>
+</html>

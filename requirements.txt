@@ -1,0 +1,8 @@
+# Dependencies for YouStream2Audio
+yt-dlp
+ffmpeg-python
+rich
+Flask
+spotdl
+python-dotenv
+mutagen
